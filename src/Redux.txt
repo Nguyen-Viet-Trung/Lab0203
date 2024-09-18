@@ -1,0 +1,15 @@
+Cấu trúc:
+Bước 1: Xây dựng giao diện
+Bước 2: Tạo thư mục constant khai báo các biến cho ứng dụng
+Bước 3: Tạo thư mục Action để xử lý logic hành động khi người dùng thay đổi dữ liệu
+Bước 4: Tạo reducer ( Reducer là các function ( hàm ) nguyên thủy, chúng lấy state ( trạng thái) hiện tại của app
+, thực hiện action và trả về state mới. Những state này được lưu trữ như những objects và chúng định hình state
+thay đổi khi phản hồi 1 action được gửi đến store) => chứa trạng thái - state đầu và thay đổi state theo các case
+Bước 5: Tạo store. Store là nơi quản lý trạng thái (state), có thể truy cập để lấy và cập nhật trạng thái, nghe
+sự thay đổi và cập nhật qua view
+- 3 phương thúc cần chú ý:
++ getState() lấy state hiện tại
++ dispatch(action): gọi 1 action
++ subscrible(listener): nghe sự thay đổi của state -> cập nhật tại view
+Bước 6: Map dữ liệu từ store hiển thị lên view: sử dụng hàm connect để kết nối react component với redux store. Các
+component sẽ truy cập vào state của redux và dispatch(truy cập) các action
